@@ -1,0 +1,65 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: arial, serif;
+	/*font-family: 'Work Sans', sans-serif;*/
+}
+
+body{
+	background-color: rgb(150,150,150);
+}
+
+header{
+	width: auto;
+	height: 60px;
+	background-color: #121212;
+}
+
+
+/*Navbar*/
+
+/*Lista Stranica*/
+nav ul{
+	list-style: none;
+	text-align: right;
+}
+
+/*Listovi Stranica*/
+nav ul li{
+	display: inline-block;
+	padding: 13px 5px 0 20px;
+	color: #DDDDDD;
+}
+
+
+/*Linkovi Stranica*/
+nav ul li a{
+	font-weight: bold;
+	font-size: 15px;
+	text-decoration: none;
+	color: #DDDDDD;
+}
+
+/*Linkovi Stranica Sa Hover Efektom*/
+nav ul li a:hover{
+	background-color: transparent;
+	color: rgb(255,0,0);
+	opacity: 1;
+}
+
+/*Content Za Animaciju Iznad Linkova*/
+nav ul li a::before{
+	content: '';
+	display: block;
+	height: 5px;
+	background-color: red;
+	position: relative;
+	top: -12px;
+	width: 0%;
+	transition: all ease-in-out 200ms;
+}
+
+/*Content Za Animaciju Iznad Linkova Ali Sada Sa Hover Efektom*/
+nav ul li a:hover::before{
+	width: 100%;
+}
